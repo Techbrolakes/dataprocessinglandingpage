@@ -73,7 +73,6 @@ function NavbarContent() {
         <Box
           width={["100%", "100%", "100%", "540px"]}
           display={["block", "block", "flex", "flex"]}
-          color={"#fff"}
           textAlign={"left"}
           gap={"10px"}
           py={"30px"}
