@@ -98,7 +98,7 @@ function NavbarContent() {
         {/* PLAY CONTAINER */}
       </Container>
       <Box>
-        <Image src="/frame.png" width={"723.71px"} alt="HeroImage" />
+        <Image src="/Frame.png" width={"723.71px"} alt="HeroImage" />
       </Box>
     </Flex>
   );
