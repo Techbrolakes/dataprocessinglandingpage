@@ -17,7 +17,7 @@ function Features() {
         backgroundImage={"/features.png"}
         backgroundSize={"contain"}
         backgroundPosition={"center"}
-        py={"30px"}
+        py={"90px"}
       >
         {/* IMAGE BOX */}
         <Flex

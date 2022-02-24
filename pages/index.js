@@ -1,5 +1,6 @@
-import { Heading, Text } from "@chakra-ui/react";
+import { Heading, Text, Box } from "@chakra-ui/react";
 import Head from "next/head";
+import Business from "./HomeComponents/Business";
 import Hero from "./HomeComponents/Hero";
 
 export default function Home() {
@@ -11,9 +12,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <Box
+        backgroundImage={"/herobackground.png"}
+        backgroundRepeat={"no-repeat"}
+        backgroundSize={"cover"}
+      >
         <Hero />
-      </main>
+        <Business />
+      </Box>
     </div>
   );
 }
