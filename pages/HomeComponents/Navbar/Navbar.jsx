@@ -26,7 +26,7 @@ function Navbar() {
     <div>
       <Box
         color={"#fff"}
-        display={["none", "block", "flex", "flex"]}
+        display={["none", "none", "flex", "flex"]}
         justifyContent={"space-between"}
         alignItems={"center"}
         textTransform={"uppercase"}
