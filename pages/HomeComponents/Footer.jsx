@@ -20,7 +20,7 @@ function Footer() {
       px={"100px"}
     >
       <Box>
-        <Flex justify={"space-between"} align={"center"}>
+        <Flex justify={"space-between"} align={"center"} gap={"10px"}>
           <Heading
             color={"#99EFD0"}
             fontSize={["18px", "18px", "18px", "26px"]}
@@ -40,37 +40,47 @@ function Footer() {
         <Flex
           align={"center"}
           justify={"space-between"}
-          flexDirection={["column", "column", "column", "row"]}
+          flexDirection={["column", "column", "row", "row"]}
           gap={"10px"}
         >
-          <Linkprops
-            firstheading="First"
-            first="first page"
-            second="second page"
-            third="third page"
-            fourth="fourth page"
-          />
-          <Linkprops
-            firstheading="Second"
-            first="first page"
-            second="second page"
-            third="third page"
-            fourth="fourth page"
-          />
-          <Linkprops
-            firstheading="Third"
-            first="first page"
-            second="second page"
-            third="third page"
-            fourth="fourth page"
-          />
-          <Linkprops
-            firstheading="Fourth"
-            first="first page"
-            second="second page"
-            third="third page"
-            fourth="fourth page"
-          />
+          <Flex
+            justify={"space-between"}
+            gap={["30px", "50px", "100px", "200px"]}
+          >
+            <Linkprops
+              firstheading="First"
+              first="first page"
+              second="second page"
+              third="third page"
+              fourth="fourth page"
+            />
+            <Linkprops
+              firstheading="Second"
+              first="first page"
+              second="second page"
+              third="third page"
+              fourth="fourth page"
+            />
+          </Flex>
+          <Flex
+            justify={"space-between"}
+            gap={["30px", "50px", "100px", "200px"]}
+          >
+            <Linkprops
+              firstheading="Third"
+              first="first page"
+              second="second page"
+              third="third page"
+              fourth="fourth page"
+            />
+            <Linkprops
+              firstheading="Fourth"
+              first="first page"
+              second="second page"
+              third="third page"
+              fourth="fourth page"
+            />
+          </Flex>
         </Flex>
       </Box>
       <Flex

@@ -23,7 +23,7 @@ function Finding() {
         justify={"center"}
         align={"center"}
         gap={["50px", "50px", "70px", "100px"]}
-        flexDirection={["column-reverse", "column", "column", "row"]}
+        flexDirection={["column-reverse", "column-reverse", "column", "row"]}
       >
         <Box mx={["auto", "auto", "initial", "initial"]}>
           <Image src="/Group13.png" alt="HeroImage" width={"340px"} />

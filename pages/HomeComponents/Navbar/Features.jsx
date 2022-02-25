@@ -17,7 +17,7 @@ function Features() {
         backgroundImage={"/features.png"}
         backgroundSize={"contain"}
         backgroundPosition={"center"}
-        py={"90px"}
+        py={"20px"}
       >
         {/* IMAGE BOX */}
         <Flex
@@ -28,36 +28,44 @@ function Features() {
           flexWrap={"wrap"}
           pb={"50px"}
         >
-          <Image
-            src="profit.svg"
-            alt="profit"
-            width={["100px", "100px", "100px", "100px"]}
-          />
-          <Image
-            src="appcue.svg"
-            alt="appcue"
-            width={["100px", "100px", "100px", "100px"]}
-          />
-          <Image
-            src="shipboe.svg"
-            alt="shipboe"
-            width={["100px", "100px", "100px", "100px"]}
-          />
-          <Image
-            src="bench.svg"
-            alt="bench"
-            width={["100px", "100px", "100px", "100px"]}
-          />
-          <Image
-            src="subby.svg"
-            alt="subby"
-            width={["100px", "100px", "100px", "100px"]}
-          />
-          <Image
-            src="demio.svg"
-            alt="demio"
-            width={["100px", "100px", "100px", "100px"]}
-          />
+          <Flex gap={"20px"}>
+            <Image
+              src="profit.svg"
+              alt="profit"
+              width={["100px", "100px", "100px", "100px"]}
+            />
+            <Image
+              src="appcue.svg"
+              alt="appcue"
+              width={["100px", "100px", "100px", "100px"]}
+            />
+          </Flex>
+
+          <Flex gap={"20px"}>
+            <Image
+              src="shipboe.svg"
+              alt="shipboe"
+              width={["100px", "100px", "100px", "100px"]}
+            />
+            <Image
+              src="bench.svg"
+              alt="bench"
+              width={["100px", "100px", "100px", "100px"]}
+            />
+          </Flex>
+
+          <Flex gap={"20px"}>
+            <Image
+              src="subby.svg"
+              alt="subby"
+              width={["100px", "100px", "100px", "100px"]}
+            />
+            <Image
+              src="demio.svg"
+              alt="demio"
+              width={["100px", "100px", "100px", "100px"]}
+            />
+          </Flex>
         </Flex>
         {/* IMAGE BOX */}
         {/*   DETAILS BOX */}
@@ -79,6 +87,7 @@ function Features() {
           padding={["40px", "15px", "30px", "40px"]}
           gap={"20px"}
           flexDirection={["column", "column", "row", "row"]}
+          textAlign={["center", "center", "left", "left"]}
         >
           <FeaturesProps
             icon="/icon1.svg"
@@ -101,6 +110,7 @@ function Features() {
           px={["40px", "15px", "30px", "40px"]}
           gap={"20px"}
           flexDirection={["column", "column", "row", "row"]}
+          textAlign={["center", "center", "left", "left"]}
         >
           <FeaturesProps
             icon="Thunder-move.svg"

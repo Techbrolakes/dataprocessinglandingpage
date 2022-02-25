@@ -10,7 +10,12 @@ import {
 } from "@chakra-ui/react";
 function FeaturesProps({ heading, text, icon }) {
   return (
-    <Flex align={"flex-start"} gap={"10px"} width={"269px"}>
+    <Flex
+      align={"flex-start"}
+      gap={"10px"}
+      width={"269px"}
+      mx={["auto", "auto", "initial", "initial"]}
+    >
       <Image src={icon} alt="icon one" />
       <Box>
         <Heading
