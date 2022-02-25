@@ -49,8 +49,9 @@ function Reason() {
         <Box>
           <InputGroup>
             <Input
-              type="text"
-              placeholder="Enter password"
+              color={"#fff"}
+              type="email"
+              placeholder="Your Email"
               mx={"auto"}
               width={"400px"}
             />
