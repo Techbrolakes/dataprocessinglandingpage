@@ -17,7 +17,7 @@ function Footer() {
       backgroundSize={"contain"}
       minH={["20vh", "30vh", "40vh", "75vh"]}
       mx={"auto"}
-      px={"100px"}
+      px={["10px", "20px", "100px", "100px"]}
     >
       <Box>
         <Flex justify={"space-between"} align={"center"} gap={"10px"}>
