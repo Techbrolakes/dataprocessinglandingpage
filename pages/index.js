@@ -3,8 +3,10 @@ import Head from "next/head";
 import Business from "./HomeComponents/Business";
 import Cta from "./HomeComponents/Cta";
 import Finding from "./HomeComponents/Finding";
+import Footer from "./HomeComponents/Footer";
 import Hero from "./HomeComponents/Hero";
 import Metrics from "./HomeComponents/Metrics";
+import Reason from "./HomeComponents/Reason";
 
 export default function Home() {
   return (
@@ -25,6 +27,8 @@ export default function Home() {
         <Cta />
         <Metrics />
         <Finding />
+        <Reason />
+        <Footer />
       </Box>
     </div>
   );
