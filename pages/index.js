@@ -1,7 +1,10 @@
 import { Heading, Text, Box } from "@chakra-ui/react";
 import Head from "next/head";
 import Business from "./HomeComponents/Business";
+import Cta from "./HomeComponents/Cta";
+import Finding from "./HomeComponents/Finding";
 import Hero from "./HomeComponents/Hero";
+import Metrics from "./HomeComponents/Metrics";
 
 export default function Home() {
   return (
@@ -19,6 +22,9 @@ export default function Home() {
       >
         <Hero />
         <Business />
+        <Cta />
+        <Metrics />
+        <Finding />
       </Box>
     </div>
   );
