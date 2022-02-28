@@ -4,24 +4,19 @@ import {
   Image,
   ListItem,
   UnorderedList,
-  Drawer,
-  DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  useDisclosure,
+  IconButton,
+  VStack,
   Button,
-  Input,
+  Flex,
 } from "@chakra-ui/react";
-import React from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 function Navbar() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = React.useRef();
+  const [nav, setnav] = useState(false);
 
+  const handleNavbarClick = () => {
+    return setnav(!nav);
+  };
   return (
     <div>
       <Box
@@ -79,70 +74,86 @@ function Navbar() {
       >
         <Image src="Logo.svg" alt="website logo" />
         <Box>
-          <GiHamburgerMenu
-            size={"32px"}
-            color={"#fff"}
-            onClick={onOpen}
-            ref={btnRef}
-          />
-
-          <Drawer
-            isOpen={isOpen}
-            placement="right"
-            onClose={onClose}
-            finalFocusRef={btnRef}
-          >
-            <DrawerOverlay />
-            <DrawerContent>
-              <DrawerCloseButton />
-              <DrawerHeader>Mobile Nav</DrawerHeader>
-
-              <DrawerBody>
-                <UnorderedList
-                  listStyleType={"none"}
-                  textAlign={"center"}
-                  fontSize={"26px"}
-                >
-                  <ListItem border={"2px"} borderColor={"#F2994A"}>
-                    About
-                  </ListItem>
-                  <ListItem border={"2px"} borderColor={"#F2994A"} my={"5px"}>
-                    Gallery
-                  </ListItem>
-                  <ListItem border={"2px"} borderColor={"#F2994A"} my={"5px"}>
-                    pricing
-                  </ListItem>
-                  <ListItem border={"2px"} borderColor={"#F2994A"} my={"5px"}>
-                    FAQ
-                  </ListItem>
-                  <ListItem border={"2px"} borderColor={"#F2994A"} my={"5px"}>
-                    BENEFITS
-                  </ListItem>
-                  <Box
-                    border={"1px"}
-                    borderRadius={"3px"}
-                    borderColor={"#F2994A"}
-                    my={"5px"}
-                  >
-                    Sign in
-                  </Box>
-                  <Box background={"#F2994A"} borderRadius={"3px"} my={"5px"}>
-                    Sign up
-                  </Box>{" "}
-                </UnorderedList>
-              </DrawerBody>
-
-              <DrawerFooter textAlign={"center"}>
-                <Image
-                  src="Logo.svg"
-                  alt="website logo"
-                  width="100px"
-                  mx={"auto"}
-                />
-              </DrawerFooter>
-            </DrawerContent>
-          </Drawer>
+          {nav ? (
+            <IconButton
+              aria-label="Fa Times"
+              icon={<FaTimes />}
+              onClick={handleNavbarClick}
+            />
+          ) : (
+            <IconButton
+              aria-label="Fa Bars"
+              icon={<FaBars />}
+              onClick={handleNavbarClick}
+            />
+          )}
         </Box>
+      </Box>
+      <Box display={["block", "block", "none", "none"]}>
+        {nav ? (
+          <Box
+            color="#fff"
+            display={"block"}
+            position={"absolute"}
+            zIndex={"3"}
+            bg={"#2A1855"}
+            padding={"1rem"}
+            width={"100%"}
+            shadow="2xl"
+          >
+            <UnorderedList
+              textTransform={"capitalize"}
+              fontSize="14px"
+              listStyleType={"none"}
+              textAlign={"center"}
+            >
+              <ListItem shadow={"lg"} p={1} my={1}>
+                About
+              </ListItem>
+              <ListItem shadow={"lg"} p={1} my={1}>
+                Gallery
+              </ListItem>
+              <ListItem shadow={"lg"} p={1} my={1}>
+                pricing
+              </ListItem>
+              <ListItem shadow={"lg"} p={1} my={1}>
+                FAQ
+              </ListItem>
+              <ListItem shadow={"lg"} p={1} my={1}>
+                Benefits
+              </ListItem>
+            </UnorderedList>
+            <Flex justify={"center"} textAlign={"center"} gap={"10px"} my={1}>
+              <Box
+                border={"1px"}
+                borderRadius={"3px"}
+                borderColor={"#F2994A"}
+                width={"112px"}
+                py={"3px"}
+              >
+                Sign in
+              </Box>
+              <Box
+                background={"#F2994A"}
+                borderRadius={"3px"}
+                width={"112px"}
+                py={"3px"}
+              >
+                Sign up
+              </Box>
+            </Flex>
+          </Box>
+        ) : (
+          <Box color="#fff" display={"none"}>
+            <UnorderedList textTransform={"capitalize"}>
+              <ListItem>About</ListItem>
+              <ListItem>Gallery</ListItem>
+              <ListItem>pricing</ListItem>
+              <ListItem>FAQ</ListItem>
+              <ListItem>Benefits</ListItem>
+            </UnorderedList>
+          </Box>
+        )}
       </Box>
     </div>
   );
